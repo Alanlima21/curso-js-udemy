@@ -1,3 +1,4 @@
+// var tem escopo global e de função
 {
     {
         {
