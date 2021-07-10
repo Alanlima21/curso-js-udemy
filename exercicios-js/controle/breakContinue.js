@@ -11,5 +11,5 @@ for(let y in nums){
     if(y ==5){
         continue;   // pula a execução atual
     }
-    console.log(`${y} = ${nums[y]}`);
+    console.log(`${y} = ${nums[y]}`);    
 }
