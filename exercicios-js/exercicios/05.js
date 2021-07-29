@@ -3,7 +3,7 @@ const valorFormatado = (valor) =>{
 }
 
 const valorFormatadoFixed = (valor=0.405655565) =>{
-    return `R$ ${valor.toFixed(2)}`
+    return `R$ ${valor.toFixed(4)}`
 }
 
 const valorFormatado2 = (valor, casas=2) =>{
