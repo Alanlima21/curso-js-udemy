@@ -1,8 +1,7 @@
 function receberPrimeiroEUltimoElemento(array){
-    let novoArray = [];
-    novoArray.push(array[0]);
-    novoArray.push(array[array.length - 1]);
-    console.log(novoArray);
+    let ultimo = array.pop();
+    let primeiro = array.shift();
+    console.log([primeiro, ultimo]);
 }
 
 receberPrimeiroEUltimoElemento([7,14,"olá"]);
