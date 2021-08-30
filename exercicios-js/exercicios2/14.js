@@ -1,6 +1,5 @@
 function objetoParaArray(obj){
    let array = [];
-  
    
     Object.keys(obj).forEach(function(item){
         array.push([].concat(item + " = " + obj[item]));
