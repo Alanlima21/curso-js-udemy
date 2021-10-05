@@ -15,7 +15,7 @@
 <style>
     .progresso{
         height: 20px;
-        width: 500px;
+        width: 300px;
         border: solid 1px #444;
         margin: 20px; 
     }
@@ -29,3 +29,22 @@
         width: 0%;
     }
 </style>
+
+<script>
+    function configurarVideo(id){
+        const video = document.getElementById(id);
+        //video.oncontextmenu = () => false;
+
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play();
+        document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause();
+
+        setInterval(() => {
+            const percentual = (video.currentTime / video.duration) * 100;
+            const valueDiv = document.querySelector(`[wm-progresso=${id}] > div`);
+            valueDiv.style.width = `${percentual}%`;
+            valueDiv.innerHTML = `${percentual.toFixed(1)}%`
+        },500);
+    }
+    
+    configurarVideo('meuVideo');
+</script>
