@@ -6,6 +6,23 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        p {
+            background-color: #aaa;
+        }
+
+        .observacao { /*Nível de especificidade maior */
+            background-color: #5f5;
+            border: dashed 5px;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        p.observacao{ /*Nível de especificidade maior */
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+
     </style>
 </head>
 
